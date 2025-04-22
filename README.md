@@ -1,2 +1,0 @@
-# smallRedBook
-练习
