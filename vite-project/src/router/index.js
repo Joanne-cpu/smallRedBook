@@ -3,8 +3,27 @@ import {createRouter,createWebHashHistory} from 'vue-router'
 const routes=[
     {
         path:'/',
-        name:'Home',
-        component:()=>import('')
+        redirect:'/index'
+    },
+    {
+        path:'/index',
+        name:'index',
+        component:()=>import('../view/index/index.vue')
+    },
+    {
+        path:'/find',
+        name:'Find',
+        component:()=>import('../view/find/index.vue')
+    },
+    {
+        path:'/notice',
+        name:'Notice',
+        component:()=>import('../view/notice/index.vue')
+    },
+    {
+        path:'/my',
+        name:'My',
+        component:()=>import('../view/my/index.vue')
     }
 ]
 
@@ -12,7 +31,8 @@ const routes=[
 const router =createRouter(
     {
         history:createWebHashHistory(),
-        routes
+        routes,
+        linkActiveClass:'active'
     }
 )
 
