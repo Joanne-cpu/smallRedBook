@@ -1,9 +1,6 @@
 <template>
   <IndexHeader/>
   <IndexNav/>
-  <div>
-    hhh
-  </div>
 </template>
 
 <script setup>

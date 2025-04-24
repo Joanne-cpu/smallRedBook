@@ -3,12 +3,69 @@ import {createRouter,createWebHashHistory} from 'vue-router'
 const routes=[
     {
         path:'/',
-        redirect:'/index'
+        redirect:'/index/recommend'
     },
     {
-        path:'/index',
-        name:'index',
-        component:()=>import('../view/index/index.vue')
+        path:'/index/recommend',
+        name:'Index',
+        component:()=>import('../view/index/index.vue'),
+        children:[
+            {
+                path:'/index/recommend',
+                name:'Recommend',
+                component:()=>import('../view/index/recommend/index.vue')
+            },
+            {
+                path:'/index/clothes',
+                name:'Clothes',
+                component:()=>import('../view/index/clothes/index.vue')
+            },
+            {
+                path:'/index/food',
+                name:'Food',
+                component:()=>import('../view/index/food/index.vue')
+            },
+            {
+                path:'/index/cosmetics',
+                name:'Cosmetics',
+                component:()=>import('../view/index/cosmetics/index.vue')
+            },
+            {
+                path:'/index/move',
+                name:'Move',
+                component:()=>import('../view/index/move/index.vue')
+            },
+            {
+                path:'/index/job',
+                name:'Job',
+                component:()=>import('../view/index/job/index.vue')
+            },
+            {
+                path:'/index/feeling',
+                name:'Feeling',
+                component:()=>import('../view/index/feeling/index.vue')
+            },
+            {
+                path:'/index/house',
+                name:'House',
+                component:()=>import('../view/index/house/index.vue')
+            },
+            {
+                path:'/index/game',
+                name:'Game',
+                component:()=>import('../view/index/game/index.vue')
+            },
+            {
+                path:'/index/travel',
+                name:'Travel',
+                component:()=>import('../view/index/travel/index.vue')
+            },
+            {
+                path:'/index/fitness',
+                name:'Fitness',
+                component:()=>import('../view/index/fitness/index.vue')
+            }
+        ]
     },
     {
         path:'/find',
@@ -32,7 +89,7 @@ const router =createRouter(
     {
         history:createWebHashHistory(),
         routes,
-        linkActiveClass:'active'
+        linkActiveClass:'active',
     }
 )
 

@@ -19,7 +19,7 @@
 <script setup>
     import {ref} from 'vue'
     import redBookImg from '@/assets/images/redBook.png'
-    import '../../assets/css/nav.css'
+    import '../../assets/css/index.css'
 </script>
   
 <style scoped>

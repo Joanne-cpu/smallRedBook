@@ -13,14 +13,14 @@
 </template>
 <script setup>
   import {ref} from 'vue'
-  import '../assets/css/nav.css'
+  import '../assets/css/index.css'
 import { RouterLink } from 'vue-router';
 
   let footerList=ref([
     {
       id:1,
       icon:'icon-wode',
-      path:'/index'
+      path:'/index/recommend'
     },
     {
       id:2,
